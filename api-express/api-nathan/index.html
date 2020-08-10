@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<input id="input" type="text" name="id">
+<button id="search">search</button>
+<ul id="container">
+	
+</ul>
+</body>
+</html>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+<script type="text/javascript">
+	$('#search').click((e)=>{
+		$.get("/product/" + $("#input").val(), data => {
+			$("#container").empty()
+			console.log(data)
+			for (let o in data){
+				$("#container").append("<li>"+o+" : "+data[o]+"</li>")
+			}
+		})
+	})
+</script>

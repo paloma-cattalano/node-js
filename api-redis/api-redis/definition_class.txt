@@ -1,0 +1,35 @@
+Chambre:
+  identifiantChambre: UUID
+  numeroChambre: Nombre
+  prix: Nombre
+  nbLit: Nombre
+  possedeSalleDeBain: Boolean
+  balcon: Boolean
+  terrasse: Boolean
+  clim: Boolean
+  télé: Boolean
+  petitDejeuner: Boolean
+  prixPetitDejeuner: Number
+  accepteAnimaux: Boolean
+  accepteEnfant: Boolean
+  etage: Nombre
+  estDisponible: Boolean
+  litKingSize: Boolean
+  optionPetalDeRose: Boolean
+
+
+  isLyndaProof(): vérifier si vivable pour lynda
+
+Reservation:
+  numeroReservation: UUID
+  dateEntree: Date()
+  dateSortie: Date()
+  numeroChambre: identifiant chambre
+  numeroClient: identifiant client
+
+Client:
+  identifiantClient: UUID
+  nom: string
+  prenom: string
+  addresse: string
+  email: string
